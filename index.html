@@ -5,14 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiddo</title>
+    <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/script.js" defer></script>
 </head>
 <body>
     <h3>Choose the mathematical operation that makes this equation correct</h3>
-    <span id="first_number"></span>
-    <span id="operation"></span>
-    <span id="second_number"></span>
-    <span>=</span>
-    <span id="result"></span>
+    <div class="problem">
+        <span id="first_number"></span>
+        <span id="operation"></span>
+        <span id="second_number"></span>
+        <span id="equality">=</span>
+        <span id="result"></span>
+    </div>
+
+    <div class="operations">
+        <button id="addition">+</button>
+        <button id="substraction">-</button>
+        <button id="multiplication">*</button>
+    </div>
 </body>
 </html>

@@ -1,5 +1,6 @@
 const firstNumberSlot = document.querySelector('#first_number');
 const secondNumberSlot = document.querySelector('#second_number');
+const operationSlot = document.querySelector('#operation');
 const resultSlot = document.querySelector('#result');
 
 function generateRandomNumber(max){
@@ -11,7 +12,7 @@ function getResult(){
     // 2 ---> -
     // 3 ---> *
     // 4 ---> /
-    operationID = generateRandomNumber(4)
+    operationID = generateRandomNumber(3)
     switch (operationID) {
         case 1: 
         result = firstNumber + secondNumber;
@@ -22,9 +23,9 @@ function getResult(){
         case 3: 
         result = firstNumber * secondNumber;
         break;
-        case 4: 
-        result = firstNumber / secondNumber;
-        break;
+        // case 4: 
+        // result = firstNumber / secondNumber;
+        // break;
     }
 
     return result
@@ -38,3 +39,6 @@ firstNumberSlot.textContent = firstNumber;
 secondNumberSlot.textContent = secondNumber;
 resultSlot.textContent = result;
 
+function validateAnswer(){
+    
+}
