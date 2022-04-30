@@ -1,46 +1,63 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    /* font-size: 12vw; */
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 90%;
+    background-color: antiquewhite;
     margin: auto;
-    background-color: aquamarine;   
 }
 
+/* .main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 80%;
+    background-color: azure;
+} */
+
 h3{
-    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 5vw;
+    text-transform: capitalize;
+    margin: 10vw;
 }
 
 .problem {
+    /* background-color: orange; */
     display: flex;
     justify-content: center;
-    column-gap: 5rem;
-    margin-bottom: 5rem;
+    column-gap: 5vw;
+    margin-bottom: 10vw;
 }
 
-#first_number, #operation, #second_number, #result {
-    width: 13vw;
-    height: 13vw;
-    outline: blueviolet 1vw solid;
-    vertical-align: middle;
+.problem span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    min-width: 15vw;
+    height: 15vw;
+    outline: blueviolet 0.5vw solid;
     font-size: 12vw;
+    text-align: center;
 }
 
-.operations {
+.operations, .control {
     display: flex;
     justify-content: space-around;
+    margin: 5vw;
 }
 
 #equality {
     font-size: 12vw;
 }
 
-button {
-    width: 14vw;
-    height: 7vw;
-    font-size: 5vw;
+.operations button {
+    /* vertical-align: auto; */
+    width: 15vw;
+    height: 15vw;
+    font-size: 10vw;
 }

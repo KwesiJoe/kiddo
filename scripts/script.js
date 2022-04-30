@@ -3,9 +3,10 @@ const secondNumberSlot = document.querySelector('#second_number');
 const operationSlot = document.querySelector('#operation');
 const resultSlot = document.querySelector('#result');
 const addBtn = document.querySelector('#addition')
+const checkBtn = document.querySelector('#check-answer')
 const subtractBtn = document.querySelector('#subtraction')
 const multiplyBtn = document.querySelector('#multiplication')
-
+let answer = ''
 
 //Event listener for class 'operations'
 const operationsArr = [addBtn, subtractBtn, multiplyBtn]
@@ -14,6 +15,9 @@ operationsArr.forEach(item => {
         operationSlot.innerHTML = item.innerHTML
     })
 })
+
+// Event listener for answer checking
+checkBtn.addEventListener('click', validateAnswer)
 
 function generateRandomNumber(max){
     return Math.round(Math.random() * (max - 1)) + 1;
@@ -24,20 +28,28 @@ function getResult(){
     switch (operationID) {
         case 1: //addition
             result = firstNumber + secondNumber;
+            answer = '\u002B' //use unicode so hmtl chars will match
             break;
         case 2: //subtraction
             result = firstNumber - secondNumber;
+            answer = '\u2212';
             break;
         case 3: //multiplication
             result = firstNumber * secondNumber;
+            answer = '\u00D7'
             break;
         // case 4: //division
         // result = firstNumber / secondNumber;
+        // answer = '/'
         // break;
     }
 
     return result
 }
+
+//Lvl 1 - 10, 10
+// Lvl 2 - 10, 100
+// Lvl 3 - 100, 100
 
 // Gameplay
 firstNumber = generateRandomNumber(10);
@@ -50,5 +62,10 @@ secondNumberSlot.textContent = secondNumber;
 resultSlot.textContent = result;
 
 function validateAnswer(){
-    
+    console.log(operationSlot.innerHTML, answer)
+    if (operationSlot.innerHTML === answer) {
+        console.log('Correct answer')
+    } else {
+        console.log('Wrong answer')
+    }
 }
