@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    /* font-size: 12vw; */
+    font-size: 24px;
 }
 
 body {
@@ -26,7 +26,6 @@ h3{
 }
 
 .problem {
-    /* background-color: orange; */
     display: flex;
     justify-content: center;
     column-gap: 5vw;
@@ -55,9 +54,27 @@ h3{
     font-size: 12vw;
 }
 
-.operations button {
+button {
     /* vertical-align: auto; */
     width: 15vw;
     height: 15vw;
-    font-size: 10vw;
+    font-size: 3rem;
+}
+
+.control button {
+    width: 25vw;
+    font-size: 1.3rem;
+}
+
+.feedback {
+    border-radius: 5vw;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 20vw;
+    font-size: 2rem;
+    color: black;
+    background-color: whitesmoke;
 }

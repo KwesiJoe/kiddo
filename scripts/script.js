@@ -6,10 +6,14 @@ const addBtn = document.querySelector('#addition')
 const checkBtn = document.querySelector('#check-answer')
 const subtractBtn = document.querySelector('#subtraction')
 const multiplyBtn = document.querySelector('#multiplication')
+const feedback = document.querySelector('.feedback')
+const nextQuestion = document.querySelector('#next-question')
+const quit = document.querySelector('#quit')
 let answer = ''
 
+
 //Event listener for class 'operations'
-const operationsArr = [addBtn, subtractBtn, multiplyBtn]
+const operationsArr = [addBtn, subtractBtn, multiplyBtn];
 operationsArr.forEach(item => {
     item.addEventListener('click', () => {
         operationSlot.innerHTML = item.innerHTML
@@ -18,6 +22,41 @@ operationsArr.forEach(item => {
 
 // Event listener for answer checking
 checkBtn.addEventListener('click', validateAnswer)
+
+// Event listener for quit button
+nextQuestion.addEventListener('click', () => {
+    operationSlot.innerHTML = '';
+    feedback.innerHTML = '';
+    gameplay();
+})
+//Lvl 1 - 10, 10
+// Lvl 2 - 10, 100
+// Lvl 3 - 100, 100
+
+
+
+// Gameplay
+gameplay()
+
+function gameplay() {
+    firstNumber = generateRandomNumber(10);
+    secondNumber = generateRandomNumber(10);
+    result = getResult()
+
+    //update HTML
+    firstNumberSlot.textContent = firstNumber;
+    secondNumberSlot.textContent = secondNumber;
+    resultSlot.textContent = result;
+}
+    
+function validateAnswer(){
+    console.log(operationSlot.innerHTML, answer)
+    if (operationSlot.innerHTML === answer) {
+        feedback.innerHTML = "Correct answer!"
+    } else {
+        feedback.innerHTML = "Wrong answer!"
+    }
+}
 
 function generateRandomNumber(max){
     return Math.round(Math.random() * (max - 1)) + 1;
@@ -43,29 +82,5 @@ function getResult(){
         // answer = '/'
         // break;
     }
-
     return result
-}
-
-//Lvl 1 - 10, 10
-// Lvl 2 - 10, 100
-// Lvl 3 - 100, 100
-
-// Gameplay
-firstNumber = generateRandomNumber(10);
-secondNumber = generateRandomNumber(10);
-result = getResult()
-
-//update HTML
-firstNumberSlot.textContent = firstNumber;
-secondNumberSlot.textContent = secondNumber;
-resultSlot.textContent = result;
-
-function validateAnswer(){
-    console.log(operationSlot.innerHTML, answer)
-    if (operationSlot.innerHTML === answer) {
-        console.log('Correct answer')
-    } else {
-        console.log('Wrong answer')
-    }
 }
