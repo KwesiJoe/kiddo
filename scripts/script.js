@@ -8,8 +8,10 @@ const subtractBtn = document.querySelector('#subtraction')
 const multiplyBtn = document.querySelector('#multiplication')
 const feedback = document.querySelector('.feedback')
 const nextQuestion = document.querySelector('#next-question')
-const quit = document.querySelector('#quit')
+const difficulty = document.querySelector('#difficulty')
 let answer = ''
+let difficultyToggle = false;
+let maxOperand = 10;
 
 
 //Event listener for class 'operations'
@@ -20,6 +22,19 @@ operationsArr.forEach(item => {
     })
 })
 
+// Event listener for difficulty
+difficulty.addEventListener('click', () => {
+    if (difficultyToggle === false) {
+        maxOperand = 100;
+        difficultyToggle = true;
+        difficulty.innerHTML ='Easier Questions?'
+    } else {
+        maxOperand = 10;
+        difficultyToggle = false;
+        difficulty.innerHTML = 'Harder Questions?'
+    }
+    
+})
 // Event listener for answer checking
 checkBtn.addEventListener('click', validateAnswer)
 
@@ -39,8 +54,8 @@ nextQuestion.addEventListener('click', () => {
 gameplay()
 
 function gameplay() {
-    firstNumber = generateRandomNumber(10);
-    secondNumber = generateRandomNumber(10);
+    firstNumber = generateRandomNumber(maxOperand);
+    secondNumber = generateRandomNumber(maxOperand);
     result = getResult()
 
     //update HTML
