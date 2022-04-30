@@ -2,6 +2,34 @@ const firstNumberSlot = document.querySelector('#first_number');
 const secondNumberSlot = document.querySelector('#second_number');
 const operationSlot = document.querySelector('#operation');
 const resultSlot = document.querySelector('#result');
+let timer = document.querySelector('#timer');
+let ding = document.querySelector('#ding');
+
+
+//timer functions --tried adding a ding sound but still not playing//////////////
+var counter = 0;
+let timeLeft = 10;
+
+function convertSeconds(s){
+    let minute = Math.floor(s/60);
+    let sec = s % 60;
+    return minute + ':' + sec;
+}
+
+
+
+let timerInterval =setInterval(function timeIt(){
+    counter++;
+    timer.innerHTML = convertSeconds(timeLeft - counter); // to reverse the counter
+    
+    if(timeLeft === counter){ //
+        timer.innerHTML = 'Next Question';
+        ding.play();
+        clearInterval(timerInterval)
+    }
+    },1000)
+/////////////timer functions up////////////////////////
+
 
 function generateRandomNumber(max){
     return Math.round(Math.random() * (max - 1)) + 1;
