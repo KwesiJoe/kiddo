@@ -9,19 +9,27 @@
     <script src="./scripts/script.js" defer></script>
 </head>
 <body>
-    <h3>Choose the mathematical operation that makes this equation correct</h3>
-    <div class="problem">
-        <span id="first_number"></span>
-        <span id="operation"></span>
-        <span id="second_number"></span>
-        <span id="equality">=</span>
-        <span id="result"></span>
-    </div>
-
-    <div class="operations">
-        <button id="addition">+</button>
-        <button id="substraction">-</button>
-        <button id="multiplication">*</button>
+    <div class="main">
+        <h3>Choose the mathematical operation that makes this equation correct</h3>
+        <div class="problem">
+            <span id="first_number"></span>
+            <span id="operation"></span>
+            <span id="second_number"></span>
+            <span id="equality">&equals;</span>
+            <span id="result"></span>
+        </div>
+        <div class="operations">
+            <button id="addition">&plus;</button>
+            <button id="subtraction">&minus;</button>
+            <button id="multiplication">&times;</button>
+            <button id="division">&divide;</button>
+        </div>
+        <div class="control">
+            <button id="check-answer">Check Answer</button>
+            <button id="next-question">Next Question</button>
+            <button id="difficulty">Harder Questions?</button>
+        </div>
+        <div class="feedback"></div>
     </div>
 </body>
 </html>
