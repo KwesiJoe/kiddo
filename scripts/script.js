@@ -68,8 +68,10 @@ function validateAnswer(){
     console.log(operationSlot.innerHTML, answer)
     if (operationSlot.innerHTML === answer) {
         feedback.innerHTML = "Correct answer!"
+        feedback.style.color = "green";
     } else {
         feedback.innerHTML = "Wrong answer!"
+        feedback.style.color = "red";
     }
 }
 let timer = document.querySelector('#timer');

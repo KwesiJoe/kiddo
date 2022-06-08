@@ -1,83 +1,143 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-size: 24px;
+    /* font-size: 24px; */
 }
 
 body {
-    background-color: antiquewhite;
-    margin: auto;
-}
-
-/* .main {
-    margin: 0 auto;
+    background-color: wheat;
+    /* padding-bottom: 3rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 80%;
-    background-color: azure;
-} */
+    align-items: center;
+    font-family: Tahoma, sans-serif;
+}
+
+ .main {
+    margin-top: 1rem;
+    border-radius: 10px;
+    height: 90vmax;
+    width: 96vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(39 77% 73% / 1);
+} 
+
+@media screen and (min-width: 500px) {
+    .main{
+        max-height: 90vh;
+        max-width: 90vw;
+    }
+}
 
 h3{
+    font-size: 1.5rem;
     text-align: center;
-    font-size: 5vw;
     text-transform: capitalize;
-    margin: 10vw;
+    margin: 1.75rem 0 0 0;
+    width: 60vw;
+}
+
+@media screen and (min-width: 500px) {
+    h3{
+        font-size: 2.25rem;
+        width: 80vw;
+    }
 }
 
 .problem {
     display: flex;
     justify-content: center;
-    column-gap: 5vw;
-    margin-bottom: 10vw;
-}
-
+    column-gap: 1rem;
+ }
+/* Problem div Styles
+------------------------ */
 .problem span {
+    border-radius: 5px;
+    height: 3rem;
+    width: 3.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5%;
-    min-width: 15vw;
-    height: 15vw;
-    outline: blueviolet 0.5vw solid;
-    font-size: 12vw;
+    outline: rgb(64, 34, 173) 0.5vw solid;
     text-align: center;
-}
-
-.operations, .control {
-    display: flex;
-    justify-content: space-around;
-    margin: 5vw;
-}
-
-#equality {
-    font-size: 12vw;
-}
-
-button {
-    /* vertical-align: auto; */
-    width: 15vw;
-    height: 15vw;
     font-size: 3rem;
 }
 
+#equality {
+    font-size: 3rem;
+}
+
+@media screen and (min-width: 500px) {
+    .problem {
+        column-gap: 2.5rem;
+    }
+    .problem span {
+        height: 5rem;
+        width: 6rem;
+        font-size: 6rem;
+    }
+
+    #equality {
+        font-size: 6rem;
+    }
+}
+
+/* Operations div Styles
+------------------------- */
+.operations {
+    display: flex;
+    margin: 1rem 0;
+}
+.operations button {
+    margin: 0 1rem;
+    padding: 0 15px;
+    font-size: 3rem;
+}
+
+/* Control div Styles
+---------------------- */
+.control {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 1rem;
+}
+
 .control button {
-    width: 25vw;
-    font-size: 1.3rem;
+    padding: 8px 10px ;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 1.25rem;
+}
+
+#next-question {
+    margin: 0px;
+}
+
+@media screen and (min-width: 500px) {
+    .control button {
+        padding: 8px 10px ;
+        font-size: 1.75rem;
+    }
+    
+    #next-question {
+        margin: 0px 2rem;
+    }
 }
 
 .feedback {
-    border-radius: 5vw;
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    width: 50vw;
-    height: 20vw;
-    font-size: 2rem;
-    color: black;
-    background-color: whitesmoke;
-    width: 14vw;
-    height: 7vw;
+    font-size: 1.5rem;
+}
+@media screen and (min-width: 500px) {
+    .feedback {
+        font-size: 2.25rem;
+    }
 }
 
+.time-sound {
+    margin-top: 1rem;
+}
