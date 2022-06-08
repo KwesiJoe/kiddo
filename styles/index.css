@@ -1,31 +1,41 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    font-size: 24px;
+    /* font-size: 24px; */
 }
 
 body {
+    border: 3px dotted green;
     background-color: antiquewhite;
-    margin: auto;
-}
-
-/* .main {
-    margin: 0 auto;
+    padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 80%;
-    background-color: azure;
-} */
+    align-items: center;
+}
 
+ .main {
+    height: 80vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 80%;
+    background-color: azure;
+} 
+/*
 h3{
+    border: 2px solid midnightblue;
     text-align: center;
-    font-size: 5vw;
+    font-size: 2rem;
     text-transform: capitalize;
+    margin-bottom: 1.5rem auto ;
+    max-width: 80%;
     margin: 10vw;
 }
 
 .problem {
+    border: 2px solid maroon;
     display: flex;
     justify-content: center;
     column-gap: 5vw;
@@ -55,7 +65,7 @@ h3{
 }
 
 button {
-    /* vertical-align: auto; */
+    vertical-align: auto; 
     width: 15vw;
     height: 15vw;
     font-size: 3rem;
@@ -80,4 +90,4 @@ button {
     width: 14vw;
     height: 7vw;
 }
-
+*/
