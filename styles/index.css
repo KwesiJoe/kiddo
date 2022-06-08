@@ -28,7 +28,8 @@ body {
 
 @media screen and (min-width: 500px) {
     .main{
-        max-height: 80vh;
+        max-height: 90vh;
+        max-width: 90vw;
     }
 }
 
@@ -89,12 +90,14 @@ h3{
 ------------------------- */
 .operations {
     display: flex;
+    margin: 1rem 0;
 }
 .operations button {
     margin: 0 15px;
     padding: 0 10px;
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
+
 /* Control div Styles
 ---------------------- */
 .control {
@@ -109,7 +112,7 @@ h3{
     padding: 8px 10px ;
     border: 1px solid;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 
 #next-question {
