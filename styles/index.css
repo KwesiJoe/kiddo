@@ -6,7 +6,7 @@
 
 body {
     background-color: wheat;
-    padding-bottom: 3rem;
+    /* padding-bottom: 3rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,8 +92,8 @@ h3{
 }
 .operations button {
     margin: 0 15px;
-    padding: 5px 13px;
-    font-size: 2rem;
+    padding: 0 10px;
+    font-size: 2.5rem;
 }
 /* Control div Styles
 ---------------------- */
@@ -109,6 +109,7 @@ h3{
     padding: 8px 10px ;
     border: 1px solid;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 #next-question {
