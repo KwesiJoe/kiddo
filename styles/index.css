@@ -18,7 +18,7 @@ body {
     margin-top: 1rem;
     border-radius: 10px;
     height: 90vmax;
-    width: 92%;
+    width: 96vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -93,8 +93,8 @@ h3{
     margin: 1rem 0;
 }
 .operations button {
-    margin: 0 15px;
-    padding: 0 10px;
+    margin: 0 1rem;
+    padding: 0 15px;
     font-size: 3rem;
 }
 
@@ -106,7 +106,6 @@ h3{
     justify-content: space-evenly;
     row-gap: 1rem;
 }
-
 
 .control button {
     padding: 8px 10px ;
