@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    /* font-size: 24px; */
 }
 
 body {
@@ -17,7 +16,7 @@ body {
  .main {
     margin-top: 1rem;
     border-radius: 10px;
-    height: 90vmax;
+    height: 90vh;
     width: 96vw;
     display: flex;
     flex-direction: column;
@@ -29,7 +28,7 @@ body {
 @media screen and (min-width: 500px) {
     .main{
         max-height: 90vh;
-        max-width: 90vw;
+        width: 90vw;
     }
 }
 
@@ -37,14 +36,13 @@ h3{
     font-size: 1.5rem;
     text-align: center;
     text-transform: capitalize;
-    margin: 1.75rem 0 0 0;
-    width: 60vw;
+    margin: 0.75rem 0 0 0;
+    width: 80vw;
 }
 
 @media screen and (min-width: 500px) {
     h3{
         font-size: 2.25rem;
-        width: 80vw;
     }
 }
 
@@ -88,30 +86,39 @@ h3{
 
 /* Operations div Styles
 ------------------------- */
+
+
 .operations {
-    display: flex;
-    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
 }
 .operations button {
     margin: 0 1rem;
     padding: 0 15px;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
+@media screen and (min-width: 500px) {
+    .operations {
+        display: flex;
+        margin: 1rem 0;
+    }
+}
 /* Control div Styles
 ---------------------- */
 .control {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-evenly;
     row-gap: 1rem;
 }
 
 .control button {
-    padding: 8px 10px ;
+    padding: 4px 10px ;
     border: 1px solid;
     border-radius: 5px;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 
 #next-question {
@@ -119,9 +126,12 @@ h3{
 }
 
 @media screen and (min-width: 500px) {
+    .control{
+        flex-direction: row;
+    }
     .control button {
         padding: 8px 10px ;
-        font-size: 1.75rem;
+        font-size: 1.55rem;
     }
     
     #next-question {
